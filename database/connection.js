@@ -34,7 +34,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 db.user = require("../models/user")(sequelize, DataTypes);
 db.heatmap = require("../models/heatmap")(sequelize, DataTypes);
-db.user.OneMany(db.heatmap, { foreignKey: "userId" });
+db.user.hasOne(db.heatmap, { foreignKey: "userId" });
 db.heatmap.belongsTo(db.user, { foreignKey: "userId" });
 db.sequelize
   .sync()
