@@ -1,6 +1,6 @@
 # Heatmap Data Structure
 ## About this project 
-This repository contains the code for a Heatmap Data Structure with user registration and login. It allows users to create and manage their heatmaps, providing a visual representation of activity over a one-year period.
+This repository contains the code for a Heatmap Data Structure(Similar to Github streaks) with user registration and login. It allows users to create and manage their heatmaps, providing a visual representation of activity over a one-year period.
 
 ## About Implementation
 I have implemented basic JWT token authorization and authentication. Afterward, I created two tables: one for users with columns UserID, Username, and Password, and the second for heatmaps with columns UserID and dateActivity. The dateActivity column essentially represents a 2D array, which is used to store heatmap data for one year. When a user creates a heatmap entry, a corresponding entry in the heatmap table is automatically generated, with the dateActivity array initialized from the user's creation date to one year later and each corresponding activity level set to 0. Users can later modify their heatmap using CRUD operation APIs..
